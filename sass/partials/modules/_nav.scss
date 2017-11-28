@@ -1,0 +1,55 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 30% 2% 0 0;
+
+    .line-links {
+        display: flex;
+        flex-direction: column; 
+        width: 10%;   
+
+        a {
+            margin: 6px;
+            width: 50%;
+            height: 6px;
+            border-radius: 5px;
+            background-color: $color-contrast;
+            align-self: flex-end;
+            -webkit-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+            text-align: left;
+        }
+
+        a:hover {
+            width: 80%;
+            height: 7px;
+            background-color: $color-hover;
+            transition: all 200ms ease-in;
+        }
+    }
+
+    .words-links {
+        display: flex;
+        flex-direction: column; 
+
+        .links {
+            margin: 0;
+            color: $color-contrast;
+            align-self: flex-start;
+            text-decoration: none;
+            color: $color-contrast;
+            font-size: 12px;
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    }
+}

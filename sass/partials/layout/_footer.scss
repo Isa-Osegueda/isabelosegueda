@@ -1,0 +1,28 @@
+ .principal-social-media {
+    width:50%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    position: absolute;
+    top: 90%;
+    margin-left: 50px; 
+
+    .icon-linkedin {
+        stroke-width: 17px;
+    }
+
+     svg {
+         stroke: $color-white;
+         stroke-width:8px;
+         width:5%;
+         margin:5px;        
+         -webkit-transition: all 200ms ease-in;
+         -ms-transition: all 200ms ease-in;
+         -moz-transition: all 200ms ease-in;
+         transition: all 200ms ease-in;
+           
+         &:hover {
+             width:6%;
+             stroke:$color-hover;
+        } 
+     }
+ }

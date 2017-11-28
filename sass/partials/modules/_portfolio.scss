@@ -1,0 +1,69 @@
+$nav-width: 5px;
+$nav-height: 5px;
+
+.carousel {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  
+		.slidewrapper {
+			position: relative;
+			display: block;
+            width: 400px; 
+            height: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 100px;
+                .slides {
+                    border: 10px solid $color-contrast;
+                    border-radius: 4px;
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                        div {
+                        position: absolute;
+                        height: 100%;
+                        width: calc(100% - #{$nav-width});
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }				
+                }
+		.move {transition: all .3s ease-out; }	
+        }
+
+    .sl-nav {
+        width: 80px;
+        position: absolute;
+        margin: -16px 30%;
+            a {
+                width: 100%;
+                height: 50%;
+                position: relative;
+                margin: -70px -35px;            
+            }
+
+            a:after {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                margin: -80px -42px;
+                transform: rotate(45deg);
+                border-left: 5px solid $color-contrast;
+                border-top: 5px solid $color-contrast;
+                border-radius: 5px;
+            }
+
+            a:last-child:after {
+                transform: rotate(-135deg);
+                margin: -40px -15px;
+            }
+           @include query(1024px) {
+                     margin: -70px -35px;
+                }      
+    }
+
+}
