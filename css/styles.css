@@ -105,7 +105,6 @@ h4 {
 
 .title-page {
   margin: 0 auto;
-  margin-top: -32%;
 }
 
 .title-page hr {
@@ -385,6 +384,18 @@ body .opacity-home {
   background-image: url("../img/bg-portfolio.png");
 }
 
+.background-skills {
+  background-image: url("../img/bg-skills.png");
+}
+
+.background-passions {
+  background-image: url("../img/bg-passions.png");
+}
+
+.background-contact {
+  background-image: url("../img/bg-contact.png");
+}
+
 .greeting {
   position: absolute;
   top: 30%;
@@ -404,6 +415,7 @@ nav {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 30% 2% 0 0;
+  display: fixed;
 }
 
 nav .line-links {
@@ -438,33 +450,10 @@ nav .line-links a:hover {
   transition: all 200ms ease-in;
 }
 
-nav .words-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-nav .words-links .links {
-  margin: 0;
-  color: #28b5a9;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  text-decoration: none;
-  color: #28b5a9;
-  font-size: 12px;
-  visibility: hidden;
-}
-
-nav .words-links .visible {
-  visibility: visible;
-}
-
-nav .words-links .hidden {
-  visibility: hidden;
+nav .line-links::before {
+  content: "home";
+  color: white;
+  margin-top: 6px;
 }
 
 .carousel {
@@ -550,4 +539,16 @@ nav .words-links .hidden {
   .carousel .sl-nav {
     margin: -70px -35px;
   }
+}
+
+.container-skills {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.container-skills img {
+  width: 100px;
+  display: inline-block;
+  margin: 20px;
 }

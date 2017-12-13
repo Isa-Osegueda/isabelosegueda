@@ -3,6 +3,7 @@ nav {
     flex-direction: row;
     justify-content: flex-end;
     padding: 30% 2% 0 0;
+    display: fixed;
 
     .line-links {
         display: flex;
@@ -23,6 +24,8 @@ nav {
             text-align: left;
         }
 
+        
+
         a:hover {
             width: 80%;
             height: 7px;
@@ -31,25 +34,31 @@ nav {
         }
     }
 
-    .words-links {
-        display: flex;
-        flex-direction: column; 
 
-        .links {
-            margin: 0;
-            color: $color-contrast;
-            align-self: flex-start;
-            text-decoration: none;
-            color: $color-contrast;
-            font-size: 12px;
-            visibility: hidden;
-        }
-        .visible {
-            visibility: visible;
-        }
+.line-links::before {
+                content: "home";
+                color: white;
+                margin-top: 6px;
+            }
+    // .words-links {
+    //     display: flex;
+    //     flex-direction: column; 
 
-        .hidden {
-            visibility: hidden;
-        }
-    }
-}
+    //     .links {
+    //         margin: 0;
+    //         color: $color-contrast;
+    //         align-self: flex-start;
+    //         text-decoration: none;
+    //         color: $color-contrast;
+    //         font-size: 12px;
+    //         visibility: hidden;
+    //     }
+    //     .visible {
+    //         visibility: visible;
+    //     }
+
+    //     .hidden {
+    //         visibility: hidden;
+    //     }
+    // }
+ }
